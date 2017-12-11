@@ -1,4 +1,5 @@
 git checkout --orphan new
+git reset
 git add clean.sh .travis.yml
 git commit -m "init"
 git branch -d master
