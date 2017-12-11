@@ -1,0 +1,15 @@
+language: bash
+
+script:
+  - wget https://dl.google.com/linux/deb/pool/main/g/google-chrome-stable/google-chrome-stable_58.0.3029.96-1_amd64.deb
+  - ls
+  - echo https://$USERNAME:$PASSWORD@github.com > ~/.git-credentials
+  - git config --global push.default simple
+  - git config --global credential.helper store
+  - git config --global user.email "helphi.he@qq.com"
+  - git config --global user.name "helphi"
+  - git add *.deb
+  - git commit -m "google-chrome-stable_58.0.3029.96-1_amd64.deb"
+  - git config -l
+  - git push origin HEAD:master
+
